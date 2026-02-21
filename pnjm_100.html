@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pinjam Uang</title>
+
+  <style>
+    body{
+      text-align:center;
+      font-family: Arial;
+      margin-top:100px;
+      background:#f0f0f0;
+    }
+
+    button{
+      padding:12px 25px;
+      font-size:18px;
+      margin:10px;
+      cursor:pointer;
+      border:none;
+      border-radius:10px;
+    }
+
+    #ya{
+      background:green;
+      color:white;
+    }
+
+    #tidak{
+      background:red;
+      color:white;
+      position:absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PINJAM DULU 100 😁</h1>
+
+  <button id="ya" onclick="jawabYa()">YA</button>
+  <button id="tidak" onmouseover="kabur()">TIDAK</button>
+
+  <script>
+    function jawabYa(){
+      alert("Makasih 😍 Uangnya nanti saya balikin… kalau ingat 😆");
+    }
+
+    function kabur(){
+      let tombol = document.getElementById("tidak");
+
+      let x = Math.random() * window.innerWidth;
+      let y = Math.random() * window.innerHeight;
+
+      tombol.style.left = x + "px";
+      tombol.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
